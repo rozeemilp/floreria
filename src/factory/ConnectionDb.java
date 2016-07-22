@@ -1,0 +1,57 @@
+package factory;
+
+import java.sql.*;
+
+
+
+public abstract class ConnectionDb {
+
+	
+	//	protected String[] params;
+		protected Connection connection;
+		
+		abstract Connection open();	
+		
+		
+		
+		
+		
+		public ResultSet query(String query){
+				Statement st;
+				ResultSet rs = null;
+				try{
+					st = connection.createStatement();
+					rs= st.executeQuery(query);
+				}catch (SQLException e){
+						e.printStackTrace();
+				}
+				return rs;
+				
+		}	
+		public boolean execute(String query){
+				Statement st;
+				Boolean save= true;
+						
+				try{
+					st = connection.createStatement();
+					st.executeUpdate(query);
+				}catch (SQLException e){
+						save= false;
+						e.printStackTrace();
+				}
+				return save;
+				
+		}
+		public boolean close(){
+			boolean ok= true;
+			try{
+					connection.close();
+			}catch(Exception e){
+				ok= false;
+				e.printStackTrace();
+			}
+			return ok;
+			
+		}
+	
+}

@@ -1,0 +1,62 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+   
+   <<script type="text/javascript">
+
+function myFunction() {
+    document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+}
+
+</script>
+
+<div id="menu">
+
+<ul> 
+
+   <li><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Login</a>
+				 <div id="light" class="white_content">
+							<form action="LoginController" method="post">
+								Enter username : <input type="text" name="username"> <BR>
+								Enter password : <input type="password" name="password"> <BR>
+								<input type="submit" />
+							</form>
+		<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+		<div id="fade" class="black_overlay"></div>
+  </li>
+   
+   
+
+    <li class="has-sub"><a title="" href="#">Prestashop</a></li>
+     
+        <ul>
+            <li class="has-sub"><a title="" href="">Módulos</a>
+                <ul>
+                    <li><a title="" href="#">Administración</a></li>
+                    <li><a title="" href="#">Publicidad y Marketing</a></li>
+                    <li><a title="" href="#">Front Office</a></li>
+                    <li><a title="" href="#">Importación y Exportación</a></li>
+                    <li><a title="" href="#">Pago</a></li>
+                    <li><a title="" href="#">Búsqueda y filtros</a></li>
+                </ul>
+             </li>
+             <li><a title="" href="#">Themes</a></li>
+         </ul>
+    
+    <li><a href="index.jsp">Home</a></li>
+   	<li><a href="#contact">Contact</a></li>
+   				<ul> <li><a title="" href="#">Precio y Descuentos</a></li>
+                    <li><a title="" href="#">SEO</a></li>
+                    <li><a title="" href="#">Transporte y Logística</a></li>
+                    <li><a title="" href="#">Redes Sociales</a></li>
+                    <li><a title="" href="#">GRATIS</a></li>
+               </ul>
+  	<li><a href="#about">Acerca</a></li>
+ 	 <li><a href="#about">Galeria</a></li>
+  
+    
+ 
+</div>
+   
+   </ul>
+ 

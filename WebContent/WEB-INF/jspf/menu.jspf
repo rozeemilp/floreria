@@ -1,0 +1,59 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+   
+   
+   
+   
+   
+   
+  <script type="text/javascript">
+  function myFunction() {
+	    document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+	}
+  </script>
+
+
+
+<ul class="topnav">
+  <li><a href="index.jsp">Home</a></li>
+   <li><a href="">Contact</a></li>
+  <li><a href="#about">Acerca</a></li>
+  
+  <li><a href="#about">Galeria</a></li>
+  
+   <li><a href = "javascript:void(0)" onclick = "document.getElementById('lightRegistrar').style.display='block';document.getElementById('fadeRegistrar').style.display='block'">Registrarse</a>
+				 <div id="lightRegistrar" class="white_contentREGISTRAR">
+							<form action="RegistrarUserController" method="post">
+								Ingresar datos para inscripcion <BR>
+								Nombre: <input type="text" name="nombre" required> 
+								Apellido: <input type="text" name="apellido" required> <BR>
+								Edad: <input type="text" name="edad"> <BR>
+								Direccion:<input type="text" name="direccion" required>
+								Telefono: <input type="text" name="telefono" required> <BR>
+								Usuario: <input type="text" name="username" required> 
+								Contraseña : <input type="password" name="password" required> <BR>
+								<BR><input type="submit" />
+							</form>
+		<a href = "javascript:void(0)" onclick = "document.getElementById('lightRegistrar').style.display='none';document.getElementById('fadeRegistrar').style.display='none'">Close</a></div>
+		<div id="fadeRegistrar" class="black_overlayREGISTRAR"></div>
+  </li>
+   
+   
+   <li><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Login</a>
+				 <div id="light" class="white_content">
+							<form action="Login" method="post">
+								Enter username : <input type="text" name="username"> <BR>
+								Enter password : <input type="password" name="password"> <BR>
+								<input type="submit" />
+							</form>
+		<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+		<div id="fade" class="black_overlay"></div>
+  </li>
+   
+   
+   
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </li>
+</ul>
